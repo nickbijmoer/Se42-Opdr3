@@ -3,6 +3,9 @@ package auction.service;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class SellerMgr {
 
@@ -13,9 +16,16 @@ public class SellerMgr {
      * @return het item aangeboden door seller, behorende tot de categorie cat
      *         en met de beschrijving description
      */
+    
+    
+    
+    
     public Item offerItem(User seller, Category cat, String description) {
-        // TODO 
-        return null;
+        em.getTransaction().begin();
+        Item item = new Item(seller, cat, description);
+        itemDAO.create(item);
+        em.getTransaction().commit();
+        return item;
     }
     
      /**

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="1" name="auction.service.AuctionMgrTest" time="9.666" errors="2" skipped="0">
+<testsuite tests="3" failures="1" name="auction.service.AuctionMgrTest" time="2.78" errors="2" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib"/>
@@ -14,8 +14,9 @@
     <property name="user.country" value="NL"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="auction.service.AuctionMgrTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/nickbijmoer/Documents/Se42Opdr2/auction"/>
+    <property name="user.dir" value="/Users/nickbijmoer/Documents/Se42-Opdr3/auction"/>
     <property name="java.runtime.version" value="1.8.0_65-b17"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -44,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=auction.service.AuctionMgrTest -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="nl"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -62,7 +63,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="auction.service.AuctionMgrTest" name="newBid" time="9.219">
+  <testcase classname="auction.service.AuctionMgrTest" name="newBid" time="2.64">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at auction.service.AuctionMgrTest.newBid(AuctionMgrTest.java:83)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -96,47 +97,48 @@
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
-    <system-out>[EL Config]: metadata: 2016-05-19 16:21:58.573--ServerSession(2056418216)--Thread(Thread[main,5,main])--The access type for the persistent class [class auction.domain.User] is set to [FIELD].
-[EL Config]: metadata: 2016-05-19 16:21:58.716--ServerSession(2056418216)--Thread(Thread[main,5,main])--The alias name for the entity class [class auction.domain.User] is being defaulted to: User.
-[EL Config]: metadata: 2016-05-19 16:21:58.736--ServerSession(2056418216)--Thread(Thread[main,5,main])--The table name for entity [class auction.domain.User] is being defaulted to: USER.
-[EL Config]: metadata: 2016-05-19 16:21:58.9--ServerSession(2056418216)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
-[EL Info]: 2016-05-19 16:22:02.15--ServerSession(2056418216)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
-[EL Fine]: connection: 2016-05-19 16:22:03.04--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
-[EL Config]: connection: 2016-05-19 16:22:03.082--ServerSession(2056418216)--Connection(1268786037)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+    <system-out>[EL Config]: metadata: 2016-05-20 15:32:28.749--ServerSession(1752203484)--Thread(Thread[main,5,main])--The access type for the persistent class [class auction.domain.User] is set to [FIELD].
+[EL Config]: metadata: 2016-05-20 15:32:28.778--ServerSession(1752203484)--Thread(Thread[main,5,main])--The alias name for the entity class [class auction.domain.User] is being defaulted to: User.
+[EL Config]: metadata: 2016-05-20 15:32:28.782--ServerSession(1752203484)--Thread(Thread[main,5,main])--The table name for entity [class auction.domain.User] is being defaulted to: USER.
+[EL Config]: metadata: 2016-05-20 15:32:28.806--ServerSession(1752203484)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Info]: 2016-05-20 15:32:29.931--ServerSession(1752203484)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
+[EL Fine]: connection: 2016-05-20 15:32:30.248--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: connection: 2016-05-20 15:32:30.262--ServerSession(1752203484)--Connection(1859724001)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
 	platform=&gt;MySQLPlatform
 	user name=&gt; &quot;root&quot;
 	datasource URL=&gt; &quot;jdbc:mysql://localhost:3306/Opdr2&quot;
 ))
-[EL Config]: connection: 2016-05-19 16:22:03.114--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://localhost:3306/Opdr2
+[EL Config]: connection: 2016-05-20 15:32:30.269--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://localhost:3306/Opdr2
 	User: root@localhost
 	Database: MySQL  Version: 5.5.42
 	Driver: MySQL Connector Java  Version: mysql-connector-java-6.0.2 ( Revision: c6da0fe501ad43d4ed6483b60ea796dc9fbe2d7b )
-[EL Info]: connection: 2016-05-19 16:22:03.544--ServerSession(2056418216)--Thread(Thread[main,5,main])--file:/Users/nickbijmoer/Documents/Se42Opdr2/auction/target/classes/_nl.fhict.se42_auction_jar_1.0-SNAPSHOTPU login successful
-[EL Fine]: sql: 2016-05-19 16:22:04.539--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Info]: connection: 2016-05-20 15:32:30.404--ServerSession(1752203484)--Thread(Thread[main,5,main])--file:/Users/nickbijmoer/Documents/Se42-Opdr3/auction/target/classes/_nl.fhict.se42_auction_jar_1.0-SNAPSHOTPU login successful
+[EL Fine]: sql: 2016-05-20 15:32:30.507--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--CREATE TABLE USER (EMAIL VARCHAR(255) NOT NULL, PRIMARY KEY (EMAIL))
+[EL Fine]: sql: 2016-05-20 15:32:30.564--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [ss2@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.547--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.567--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [ss2@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.579--ClientSession(977975287)--Connection(1760443245)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
+[EL Fine]: sql: 2016-05-20 15:32:30.58--ClientSession(785340693)--Connection(2094770768)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
 	bind =&gt; [ss2@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.594--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.584--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [bb@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.598--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.585--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [bb@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.603--ClientSession(977975287)--Connection(1760443245)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
+[EL Fine]: sql: 2016-05-20 15:32:30.586--ClientSession(785340693)--Connection(2094770768)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
 	bind =&gt; [bb@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.609--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.588--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [bb2@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.612--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.59--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [bb2@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.615--ClientSession(977975287)--Connection(1760443245)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
+[EL Fine]: sql: 2016-05-20 15:32:30.592--ClientSession(785340693)--Connection(2094770768)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
 	bind =&gt; [bb2@nl]
 </system-out>
     <system-err>Loading class `com.mysql.jdbc.Driver&apos;. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver&apos;. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
-Thu May 19 16:22:02 CEST 2016 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Thu May 19 16:22:03 CEST 2016 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Fri May 20 15:32:30 CEST 2016 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Fri May 20 15:32:30 CEST 2016 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 </system-err>
   </testcase>
-  <testcase classname="auction.service.AuctionMgrTest" name="getItem" time="0.064">
+  <testcase classname="auction.service.AuctionMgrTest" name="getItem" time="0.016">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at auction.service.AuctionMgrTest.getItem(AuctionMgrTest.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -170,15 +172,15 @@ Thu May 19 16:22:03 CEST 2016 WARN: Establishing SSL connection without server&a
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
-    <system-out>[EL Fine]: sql: 2016-05-19 16:22:04.694--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+    <system-out>[EL Fine]: sql: 2016-05-20 15:32:30.613--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xx2@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.704--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.615--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xx2@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.712--ClientSession(1090160486)--Connection(1760443245)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
+[EL Fine]: sql: 2016-05-20 15:32:30.617--ClientSession(1137945509)--Connection(2094770768)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
 	bind =&gt; [xx2@nl]
 </system-out>
   </testcase>
-  <testcase classname="auction.service.AuctionMgrTest" name="findItemByDescription" time="0.104">
+  <testcase classname="auction.service.AuctionMgrTest" name="findItemByDescription" time="0.018">
     <failure message="expected:&lt;2&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;0&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:743)
@@ -217,17 +219,17 @@ Thu May 19 16:22:03 CEST 2016 WARN: Establishing SSL connection without server&a
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </failure>
-    <system-out>[EL Fine]: sql: 2016-05-19 16:22:04.778--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+    <system-out>[EL Fine]: sql: 2016-05-20 15:32:30.628--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xx3@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.786--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.631--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xx3@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.803--ClientSession(1637411253)--Connection(1760443245)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
+[EL Fine]: sql: 2016-05-20 15:32:30.634--ClientSession(2125594830)--Connection(2094770768)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
 	bind =&gt; [xx3@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.814--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.636--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xx4@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.818--ServerSession(2056418216)--Connection(1760443245)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2016-05-20 15:32:30.637--ServerSession(1752203484)--Connection(2094770768)--Thread(Thread[main,5,main])--SELECT EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [xx4@nl]
-[EL Fine]: sql: 2016-05-19 16:22:04.826--ClientSession(1637411253)--Connection(1760443245)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
+[EL Fine]: sql: 2016-05-20 15:32:30.639--ClientSession(2125594830)--Connection(2094770768)--Thread(Thread[main,5,main])--INSERT INTO USER (EMAIL) VALUES (?)
 	bind =&gt; [xx4@nl]
 </system-out>
   </testcase>
