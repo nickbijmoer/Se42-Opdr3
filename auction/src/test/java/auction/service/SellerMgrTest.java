@@ -1,5 +1,6 @@
 package auction.service;
 
+import auction.dao.CategoryDAOJPAImpl;
 import static org.junit.Assert.*;
 
 import nl.fontys.util.Money;
@@ -27,7 +28,7 @@ public class SellerMgrTest {
         registrationMgr = new RegistrationMgr();
         auctionMgr = new AuctionMgr();
         sellerMgr = new SellerMgr();
-        DatabaseCleaner dc = new DatabaseCleaner(Persistence.createEntityManagerFactory("db").createEntityManager());
+        DatabaseCleaner dc = new DatabaseCleaner(Persistence.createEntityManagerFactory("nl.fhict.se42_auction_jar_1.0-SNAPSHOTPU").createEntityManager());
         dc.clean();
     }
 
@@ -40,6 +41,8 @@ public class SellerMgrTest {
 
         User user1 = registrationMgr.registerUser("xx@nl");
         Category cat = new Category("cat1");
+        CategoryDAOJPAImpl categories = new CategoryDAOJPAImpl();
+        categories.create(cat);
         Item item1 = sellerMgr.offerItem(user1, cat, omsch);
         assertEquals(omsch, item1.getDescription());
         assertNotNull(item1.getId());
@@ -56,7 +59,8 @@ public class SellerMgrTest {
         User seller = registrationMgr.registerUser("sel@nl");
         User buyer = registrationMgr.registerUser("buy@nl");
         Category cat = new Category("cat1");
-        
+        CategoryDAOJPAImpl categories = new CategoryDAOJPAImpl();
+        categories.create(cat);
         
         
             // revoke before bidding

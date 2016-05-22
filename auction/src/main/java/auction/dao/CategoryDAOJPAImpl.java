@@ -24,9 +24,7 @@ public class CategoryDAOJPAImpl implements CategoryDAO {
 
     @Override
     public void create(Category category) {
-        // if (find(item.getId()) != null) {
-        //     throw new EntityExistsException();
-        // }
+      
         categories.getTransaction().begin();
         categories.persist(category);
         categories.getTransaction().commit();
@@ -34,9 +32,7 @@ public class CategoryDAOJPAImpl implements CategoryDAO {
 
     @Override
     public void edit(Category category) {
-        // if (find(item.getId()) == null) {
-        //     throw new IllegalArgumentException();
-        // }
+      
         categories.merge(category);
     }
 
