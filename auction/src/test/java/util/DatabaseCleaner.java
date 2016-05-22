@@ -1,14 +1,22 @@
 package util;
 
+import auction.domain.Bid;
+import auction.domain.Category;
+import auction.domain.Item;
 import auction.domain.User;
 import java.sql.SQLException;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.metamodel.EntityType;
 
 public class DatabaseCleaner {
 
     private static final Class<?>[] ENTITY_TYPES = {
-        User.class
+        User.class,
+        Item.class,
+        Category.class,
+        Bid.class
+                
     };
     private final EntityManager em;
 
@@ -17,13 +25,17 @@ public class DatabaseCleaner {
     }
 
     public void clean() throws SQLException {
-        em.getTransaction().begin();
 
+        em.getTransaction().begin();
+        Query q = em.createNativeQuery("SET FOREIGN_KEY_CHECKS=0;");
+        q.executeUpdate();
         for (Class<?> entityType : ENTITY_TYPES) {
             deleteEntities(entityType);
         }
+        q = em.createNativeQuery("SET FOREIGN_KEY_CHECKS=1;");
+        q.executeUpdate();
         em.getTransaction().commit();
-        //em.close();
+        em.close();
     }
 
     private void deleteEntities(Class<?> entityType) {
