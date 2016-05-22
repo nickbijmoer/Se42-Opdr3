@@ -12,9 +12,8 @@ import org.junit.Test;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import util.DatabaseCleaner;
 
 public class SellerMgrTest {
 
@@ -23,11 +22,13 @@ public class SellerMgrTest {
     private SellerMgr sellerMgr;
 
     @Before
-    public void setUp() throws Exception { 
-     
+    public void setUp() throws Exception {
+        System.out.print("before seller");
         registrationMgr = new RegistrationMgr();
         auctionMgr = new AuctionMgr();
         sellerMgr = new SellerMgr();
+        DatabaseCleaner dc = new DatabaseCleaner(Persistence.createEntityManagerFactory("db").createEntityManager());
+        dc.clean();
     }
 
     /**
@@ -52,10 +53,11 @@ public class SellerMgrTest {
         String omsch = "omsch";
         String omsch2 = "omsch2";
         
-    
         User seller = registrationMgr.registerUser("sel@nl");
         User buyer = registrationMgr.registerUser("buy@nl");
         Category cat = new Category("cat1");
+        
+        
         
             // revoke before bidding
         Item item1 = sellerMgr.offerItem(seller, cat, omsch);
@@ -71,7 +73,6 @@ public class SellerMgrTest {
         assertFalse(res2);
         int count2 = auctionMgr.findItemByDescription(omsch2).size();
         assertEquals(1, count2);
-        
         
         
         
