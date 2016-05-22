@@ -21,11 +21,7 @@ public class SellerMgr {
     
     
     public Item offerItem(User seller, Category cat, String description) {
-        em.getTransaction().begin();
-        Item item = new Item(seller, cat, description);
-        itemDAO.create(item);
-        em.getTransaction().commit();
-        return item;
+        return null;
     }
     
      /**
